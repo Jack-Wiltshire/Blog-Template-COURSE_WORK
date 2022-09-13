@@ -1,0 +1,20 @@
+<%- include ("partials/header"); -%>
+
+    <h1 class="text-center">Home</h1>
+    <figure>
+        <img src="/images/Profile Image.jpg" alt="Profile photo of Jack Wiltshire" width="237.5" height="310"
+            class="img-rounded center">
+        <figcaption class="text-center">The Coding journey begins!</figcaption>
+    </figure>
+
+    <% blogPage.forEach(posts=> { %>
+        <h1>
+            <%= posts.title %>
+        </h1>
+        <p>
+            <%= posts.entry.substring(0,100) + "..." ; %>
+                <a href="/post/<%= posts.title %>">Read more.</a>
+        </p>
+        <% }); %>
+
+            <%- include ("partials/footer"); -%>
